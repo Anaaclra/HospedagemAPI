@@ -1,9 +1,18 @@
 package com.demo.hospedagem.endereco.model;
 
+<<<<<<< HEAD
 import com.demo.hospedagem.cliente.model.Cliente;
 import jakarta.persistence.*;
 
 @Entity
+=======
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+>>>>>>> origin/main
 public class Endereco {
 
     @Id
@@ -23,6 +32,7 @@ public class Endereco {
     private String cep;
     private String pais;
 
+<<<<<<< HEAD
     public Endereco(Integer id_endereco, Cliente cliente, String logradouro, Integer numero, String complemento, String bairro, String cidade, String estado, String cep, String pais) {
         this.id_endereco = id_endereco;
         this.logradouro = logradouro;
@@ -107,4 +117,6 @@ public class Endereco {
     public void setPais(String pais) {
         this.pais = pais;
     }
+=======
+>>>>>>> origin/main
 }

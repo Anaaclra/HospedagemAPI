@@ -1,4 +1,4 @@
-package com.demo.HospedagemAPI;
+package com.demo.hospedagem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

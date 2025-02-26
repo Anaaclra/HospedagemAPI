@@ -1,7 +1,10 @@
 package com.demo.hospedagem.quarto.model;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
+<<<<<<< HEAD
 import com.demo.hospedagem.categoria.model.Categoria;
 import jakarta.persistence.*;
 
@@ -10,6 +13,12 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 @Entity
+=======
+import java.math.BigDecimal;
+
+@Data
+@AllArgsConstructor
+>>>>>>> origin/main
 public class Quarto {
 
     @Id
@@ -27,6 +36,7 @@ public class Quarto {
     private String status;
     private BigDecimal valor_diaria;
 
+<<<<<<< HEAD
     public Quarto(int capacidade, Categoria categoria, int id_quarto, int numero, String status, String tipo, BigDecimal valor_diaria) {
         this.capacidade = capacidade;
         this.id_quarto = id_quarto;
@@ -85,3 +95,6 @@ public class Quarto {
         this.valor_diaria = valor_diaria;
     }
 }
+=======
+}
+>>>>>>> origin/main

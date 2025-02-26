@@ -1,13 +1,23 @@
 package com.demo.hospedagem.pagamento.model;
 
+<<<<<<< HEAD
 import com.demo.hospedagem.reserva.model.Reserva;
 import jakarta.persistence.*;
 import org.springframework.boot.autoconfigure.web.WebProperties;
+=======
+import lombok.AllArgsConstructor;
+import lombok.Data;
+>>>>>>> origin/main
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+<<<<<<< HEAD
 @Entity
+=======
+@Data
+@AllArgsConstructor
+>>>>>>> origin/main
 public class Pagamento {
 
     @Id
@@ -23,6 +33,7 @@ public class Pagamento {
     private String metodo_pagamento;
     private String status_pagamento;
 
+<<<<<<< HEAD
     public Pagamento(Integer id_pagamento, Reserva reserva, LocalDate data_pagamento, BigDecimal valor_pago, String metodo_pagamento, String status_pagamento) {
         this.id_pagamento = id_pagamento;
         this.data_pagamento = data_pagamento;
@@ -72,3 +83,6 @@ public class Pagamento {
         this.status_pagamento = status_pagamento;
     }
 }
+=======
+}
+>>>>>>> origin/main

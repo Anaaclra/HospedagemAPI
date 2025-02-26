@@ -2,12 +2,22 @@ package com.demo.hospedagem.cliente.model;
 
 import com.demo.hospedagem.endereco.model.Endereco;
 import com.demo.hospedagem.reserva.model.Reserva;
+<<<<<<< HEAD
 import jakarta.persistence.*;
 
+=======
+import java.util.List;
+import lombok.*;
+>>>>>>> origin/main
 import java.time.LocalDate;
 import java.util.List;
 
+<<<<<<< HEAD
 @Entity
+=======
+@Data
+@AllArgsConstructor
+>>>>>>> origin/main
 public class Cliente {
 
     @Id
@@ -27,6 +37,7 @@ public class Cliente {
     @JoinColumn(name = "id_endereco", referencedColumnName = "id_endereco")
     private List<Endereco> enderecos;
 
+<<<<<<< HEAD
     public Cliente(Integer id_cliente, String nome, String email, String cpf, String telefone, LocalDate data_de_nascimento, List<Reserva> reservas, Endereco endereco) {
         this.id_cliente = id_cliente;
         this.nome = nome;
@@ -102,4 +113,7 @@ public class Cliente {
     public void setEnderecos(Endereco enderecos) {
         this.enderecos = (List<Endereco>) enderecos;
     }
+=======
+
+>>>>>>> origin/main
 }

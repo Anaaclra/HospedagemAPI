@@ -1,6 +1,5 @@
 package com.demo.hospedagem;
 
-import com.demo.hospedagem.cliente.model.Cliente;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
