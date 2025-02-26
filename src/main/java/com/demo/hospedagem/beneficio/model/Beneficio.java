@@ -19,4 +19,5 @@ public class Beneficio {
     private Integer id_beneficio;
     private String nome;
     private String descricao;
+
 }

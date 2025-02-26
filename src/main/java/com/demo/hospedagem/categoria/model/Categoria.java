@@ -1,20 +1,15 @@
 package com.demo.hospedagem.categoria.model;
-
 import com.demo.hospedagem.beneficio.model.Beneficio;
-<<<<<<< HEAD
 import jakarta.persistence.*;
-
 import java.util.List;
-
-@Entity
-=======
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import java.util.List;
 
+
 @Data
 @AllArgsConstructor
->>>>>>> origin/main
+
 public class Categoria {
 
     @Id
