@@ -2,23 +2,33 @@ package com.demo.hospedagem.quarto.model;
 
 
 
+import com.demo.hospedagem.categoria.model.Categoria;
+import jakarta.persistence.*;
+
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-
+@Entity
 public class Quarto {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_quarto;
-    private int id_categoria;
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", referencedColumnName = "id_categoria")
+    private Categoria categoria;
+
+
     private String tipo;
     private int capacidade;
     private int numero;
     private String status;
     private BigDecimal valor_diaria;
 
-    public Quarto(int capacidade, int id_categoria, int id_quarto, int numero, String status, String tipo, BigDecimal valor_diaria) {
+    public Quarto(int capacidade, Categoria categoria, int id_quarto, int numero, String status, String tipo, BigDecimal valor_diaria) {
         this.capacidade = capacidade;
-        this.id_categoria = id_categoria;
         this.id_quarto = id_quarto;
         this.numero = numero;
         this.status = status;
@@ -33,14 +43,6 @@ public class Quarto {
 
     public void setCapacidade(int capacidade) {
         this.capacidade = capacidade;
-    }
-
-    public int getId_categoria() {
-        return id_categoria;
-    }
-
-    public void setId_categoria(int id_categoria) {
-        this.id_categoria = id_categoria;
     }
 
     public int getId_quarto() {

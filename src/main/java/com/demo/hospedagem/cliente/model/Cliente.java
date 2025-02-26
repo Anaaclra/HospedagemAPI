@@ -1,19 +1,31 @@
 package com.demo.hospedagem.cliente.model;
 
-import lombok.*;
+import com.demo.hospedagem.endereco.model.Endereco;
+import com.demo.hospedagem.reserva.model.Reserva;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
+@Entity
 public class Cliente {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_cliente;
+
     private String nome;
     private String email;
     private String cpf;
     private String telefone;
     private LocalDate data_de_nascimento;
+
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Reserva> reservas;
-    private Endereco endereco;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY) //coloquei OneToMany porque pode ter mais de uma opção de endereço (karine)
+    @JoinColumn(name = "id_endereco", referencedColumnName = "id_endereco")
+    private List<Endereco> enderecos;
 
     public Cliente(Integer id_cliente, String nome, String email, String cpf, String telefone, LocalDate data_de_nascimento, List<Reserva> reservas, Endereco endereco) {
         this.id_cliente = id_cliente;
@@ -23,7 +35,7 @@ public class Cliente {
         this.telefone = telefone;
         this.data_de_nascimento = data_de_nascimento;
         this.reservas = reservas;
-        this.endereco = endereco;
+        this.enderecos = enderecos;
     }
 
 
@@ -83,11 +95,11 @@ public class Cliente {
         this.reservas = reservas;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
+    public Endereco getEnderecos() {
+        return (Endereco) enderecos;
     }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public void setEnderecos(Endereco enderecos) {
+        this.enderecos = (List<Endereco>) enderecos;
     }
 }

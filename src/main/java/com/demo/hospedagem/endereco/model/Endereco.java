@@ -1,9 +1,19 @@
 package com.demo.hospedagem.endereco.model;
 
+import com.demo.hospedagem.cliente.model.Cliente;
+import jakarta.persistence.*;
+
+@Entity
 public class Endereco {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_endereco;
-    private Integer id_cliente;
+
+    @ManyToOne
+    @JoinColumn(name = "Cliente", referencedColumnName = "id_cliente")
+    private Cliente cliente;
+
     private String logradouro;
     private Integer numero;
     private String complemento;
@@ -13,9 +23,8 @@ public class Endereco {
     private String cep;
     private String pais;
 
-    public Endereco(Integer id_endereco, Integer id_cliente, String logradouro, Integer numero, String complemento, String bairro, String cidade, String estado, String cep, String pais) {
+    public Endereco(Integer id_endereco, Cliente cliente, String logradouro, Integer numero, String complemento, String bairro, String cidade, String estado, String cep, String pais) {
         this.id_endereco = id_endereco;
-        this.id_cliente = id_cliente;
         this.logradouro = logradouro;
         this.numero = numero;
         this.complemento = complemento;
@@ -34,13 +43,6 @@ public class Endereco {
         this.id_endereco = id_endereco;
     }
 
-    public Integer getId_cliente() {
-        return id_cliente;
-    }
-
-    public void setId_cliente(Integer id_cliente) {
-        this.id_cliente = id_cliente;
-    }
 
     public String getLogradouro() {
         return logradouro;
