@@ -2,6 +2,7 @@ package com.demo.hospedagem.cliente.model;
 
 import com.demo.hospedagem.endereco.model.Endereco;
 import com.demo.hospedagem.reserva.model.Reserva;
+
 import java.util.List;
 
 import jakarta.persistence.*;
@@ -16,6 +17,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Cliente {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_cliente;
     private String nome;
 
@@ -27,9 +30,11 @@ public class Cliente {
 
     private String telefone;
     private LocalDate data_de_nascimento;
+
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Reserva> reservas;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL,  orphanRemoval = true)
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Endereco> enderecos;
 
 

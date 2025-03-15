@@ -12,6 +12,8 @@ import lombok.Data;
 @AllArgsConstructor
 public class Beneficio {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_beneficio;
     private String nome;
     private String descricao;

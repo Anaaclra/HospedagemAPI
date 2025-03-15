@@ -1,7 +1,7 @@
 package com.demo.hospedagem.quarto.model;
 
 
-import com.demo.hospedagem.categoria.model.Categoria;
+import com.demo.hospedagem.reserva.model.Reserva;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,11 +15,11 @@ public class Quarto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_quarto;
+    private Integer id_quarto;
 
     @ManyToOne
-    @JoinColumn(name = "id-categoria", referencedColumnName = "id_categoria")
-    private Categoria categoria;    //private int id_categoria;
+    @JoinColumn(name = "id_reserva", referencedColumnName = "id_reserva")
+    private Reserva reserva;
 
     private String tipo;
     private int capacidade;

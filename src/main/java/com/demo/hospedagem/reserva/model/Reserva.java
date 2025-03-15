@@ -18,15 +18,11 @@ public class Reserva {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_reserva;
+    private Integer id_reserva;
 
     @ManyToOne
     @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
-    private Cliente cliente;    //private int id_cliente;
-
-    @ManyToOne
-    @JoinColumn(name = "id_pagamento", referencedColumnName = "id_pagamento")
-    private Pagamento pagamento;   // private int id_pagamento;
+    private Cliente cliente;
 
     private LocalDate data_check_in;
     private LocalDate data_check_out;
@@ -34,8 +30,6 @@ public class Reserva {
     private BigDecimal valor_total;
     private LocalDate data_criacao;
 
-    @OneToMany
-    @JoinColumn(name = "reserva_quarto", referencedColumnName = "id_reserva")
+    @OneToMany(mappedBy = "reserva", cascade = CascadeType.ALL)
     private List<Quarto> quartos;
-
 }

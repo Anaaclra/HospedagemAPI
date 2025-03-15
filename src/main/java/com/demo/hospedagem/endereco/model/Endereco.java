@@ -2,9 +2,7 @@ package com.demo.hospedagem.endereco.model;
 
 
 import com.demo.hospedagem.cliente.model.Cliente;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -13,6 +11,8 @@ import lombok.Data;
 @AllArgsConstructor
 public class Endereco {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_endereco;
 
     @ManyToOne
