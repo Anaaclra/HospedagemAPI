@@ -1,7 +1,6 @@
 package com.demo.hospedagem.reserva.model;
 
 import com.demo.hospedagem.cliente.model.Cliente;
-import com.demo.hospedagem.pagamento.model.Pagamento;
 import com.demo.hospedagem.quarto.model.Quarto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
