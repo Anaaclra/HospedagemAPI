@@ -1,4 +1,4 @@
-package com.demo.hospedagem.config;
+package com.demo.hospedagem.entities;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

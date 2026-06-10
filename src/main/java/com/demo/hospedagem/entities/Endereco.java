@@ -1,7 +1,6 @@
-package com.demo.hospedagem.endereco.model;
+package com.demo.hospedagem.entities;
 
 
-import com.demo.hospedagem.cliente.model.Cliente;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;

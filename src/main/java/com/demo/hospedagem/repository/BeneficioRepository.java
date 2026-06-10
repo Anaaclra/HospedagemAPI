@@ -1,6 +1,6 @@
-package com.demo.hospedagem.beneficio.repository;
+package com.demo.hospedagem.repository;
 
-import com.demo.hospedagem.beneficio.model.Beneficio;
+import com.demo.hospedagem.entities.Beneficio;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

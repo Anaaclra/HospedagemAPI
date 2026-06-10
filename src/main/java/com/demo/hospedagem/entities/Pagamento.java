@@ -1,6 +1,5 @@
-package com.demo.hospedagem.pagamento.model;
+package com.demo.hospedagem.entities;
 
-import com.demo.hospedagem.reserva.model.Reserva;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,6 +1,6 @@
-package com.demo.hospedagem.categoria.repository;
+package com.demo.hospedagem.repository;
 
-import com.demo.hospedagem.categoria.model.Categoria;
+import com.demo.hospedagem.entities.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,5 @@
-package com.demo.hospedagem.cliente.model;
+package com.demo.hospedagem.entities;
 
-import com.demo.hospedagem.endereco.model.Endereco;
-import com.demo.hospedagem.reserva.model.Reserva;
 import java.util.List;
 
 import jakarta.persistence.*;

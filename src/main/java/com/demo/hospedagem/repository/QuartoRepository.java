@@ -1,6 +1,6 @@
-package com.demo.hospedagem.quarto.repository;
+package com.demo.hospedagem.repository;
 
-import com.demo.hospedagem.quarto.model.Quarto;
+import com.demo.hospedagem.entities.Quarto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

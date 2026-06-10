@@ -1,6 +1,6 @@
-package com.demo.hospedagem.endereco.repository;
+package com.demo.hospedagem.repository;
 
-import com.demo.hospedagem.endereco.model.Endereco;
+import com.demo.hospedagem.entities.Endereco;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

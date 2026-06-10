@@ -1,6 +1,6 @@
-package com.demo.hospedagem.reserva.repository;
+package com.demo.hospedagem.repository;
 
-import com.demo.hospedagem.reserva.model.Reserva;
+import com.demo.hospedagem.entities.Reserva;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

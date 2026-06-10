@@ -1,6 +1,6 @@
-package com.demo.hospedagem.cliente.repository;
+package com.demo.hospedagem.repository;
 
-import com.demo.hospedagem.cliente.model.Cliente;
+import com.demo.hospedagem.entities.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

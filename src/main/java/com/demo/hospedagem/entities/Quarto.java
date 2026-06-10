@@ -1,7 +1,6 @@
-package com.demo.hospedagem.quarto.model;
+package com.demo.hospedagem.entities;
 
 
-import com.demo.hospedagem.categoria.model.Categoria;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

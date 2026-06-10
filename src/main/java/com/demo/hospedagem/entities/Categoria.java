@@ -1,6 +1,5 @@
-package com.demo.hospedagem.categoria.model;
+package com.demo.hospedagem.entities;
 
-import com.demo.hospedagem.beneficio.model.Beneficio;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,6 +1,6 @@
-package com.demo.hospedagem.pagamento.repository;
+package com.demo.hospedagem.repository;
 
-import com.demo.hospedagem.pagamento.model.Pagamento;
+import com.demo.hospedagem.entities.Pagamento;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
